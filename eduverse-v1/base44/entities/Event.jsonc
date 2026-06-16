@@ -1,0 +1,74 @@
+{
+  "name": "Event",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string",
+      "description": "Event time e.g. '14:00'"
+    },
+    "location": {
+      "type": "string"
+    },
+    "location_type": {
+      "type": "string",
+      "enum": [
+        "in-person",
+        "virtual",
+        "hybrid"
+      ],
+      "default": "in-person"
+    },
+    "school_id": {
+      "type": "string",
+      "description": "Reference to the School that created the event"
+    },
+    "sponsor_amount": {
+      "type": "number",
+      "default": 0,
+      "description": "Sponsorship amount in USD"
+    },
+    "sponsor_name": {
+      "type": "string",
+      "description": "Name of the sponsor"
+    },
+    "attendee_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User IDs who have marked attendance"
+    },
+    "max_attendees": {
+      "type": "number",
+      "description": "Maximum number of attendees"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "active",
+        "completed",
+        "cancelled"
+      ],
+      "default": "planned"
+    },
+    "created_by_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "school_id",
+    "date"
+  ]
+}

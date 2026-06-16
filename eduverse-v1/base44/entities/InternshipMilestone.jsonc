@@ -1,0 +1,112 @@
+{
+  "name": "InternshipMilestone",
+  "type": "object",
+  "properties": {
+    "internship_id": {
+      "type": "string",
+      "description": "Reference to Internship"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "assigned_student_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of students assigned to this milestone"
+    },
+    "assigned_staff_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of staff members assigned to this milestone"
+    },
+    "required_signatures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "intern",
+              "staff",
+              "both"
+            ],
+            "description": "Who needs to sign: intern, staff, or both"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "signed"
+            ],
+            "default": "pending"
+          },
+          "signed_by": {
+            "type": "string",
+            "description": "User ID who signed"
+          },
+          "signed_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "description": "Array of signature requirements"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file_url": {
+            "type": "string"
+          },
+          "file_name": {
+            "type": "string"
+          },
+          "uploaded_by": {
+            "type": "string",
+            "description": "User ID who uploaded"
+          },
+          "uploaded_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "signature_status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "signed"
+            ],
+            "default": "pending"
+          }
+        }
+      },
+      "description": "Array of documents with signatures"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "in_progress",
+        "completed"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "internship_id",
+    "name"
+  ]
+}

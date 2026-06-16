@@ -1,0 +1,95 @@
+{
+  "name": "Course",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "thumbnail_url": {
+      "type": "string"
+    },
+    "community_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "origin_community_id": {
+      "type": "string"
+    },
+    "is_linked": {
+      "type": "boolean",
+      "default": false
+    },
+    "original_course_id": {
+      "type": "string"
+    },
+    "is_paid": {
+      "type": "boolean",
+      "default": false
+    },
+    "price": {
+      "type": "number",
+      "default": 0
+    },
+    "is_public": {
+      "type": "boolean",
+      "default": true
+    },
+    "allowed_member_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "published",
+        "archived"
+      ],
+      "default": "draft"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "total_lessons": {
+      "type": "number",
+      "default": 0
+    },
+    "estimated_hours": {
+      "type": "number",
+      "default": 0
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Career category this course belongs to"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country this course is restricted to"
+    },
+    "school_id": {
+      "type": "string",
+      "description": "School this course belongs to"
+    },
+    "is_enrollment": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_onboarding": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

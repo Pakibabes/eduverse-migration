@@ -1,0 +1,62 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Reference to User"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "linkedin_url": {
+      "type": "string"
+    },
+    "resume_url": {
+      "type": "string",
+      "description": "Uploaded resume file URL"
+    },
+    "resume_file_name": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "education_level": {
+      "type": "string",
+      "enum": [
+        "high_school",
+        "associate",
+        "bachelor",
+        "master",
+        "phd",
+        "other"
+      ],
+      "default": "bachelor"
+    },
+    "major": {
+      "type": "string"
+    },
+    "school_name": {
+      "type": "string"
+    },
+    "graduation_year": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_id"
+  ]
+}

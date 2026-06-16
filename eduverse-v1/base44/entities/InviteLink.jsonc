@@ -1,0 +1,70 @@
+{
+  "name": "InviteLink",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "school_id": {
+      "type": "string"
+    },
+    "category_id": {
+      "type": "string"
+    },
+    "cohort_id": {
+      "type": "string",
+      "description": "Reference to InternshipCohort for which internship the user is signing up for"
+    },
+    "internship_id": {
+      "type": "string",
+      "description": "Reference to specific Internship"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "super_admin",
+        "admin",
+        "school_admin",
+        "school_staff",
+        "student",
+        "professional"
+      ],
+      "default": "student",
+      "description": "Default role for users registering with this link"
+    },
+    "country": {
+      "type": "string",
+      "description": "Default country for users registering with this link"
+    },
+    "require_approval": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether users registering via this link need approval"
+    },
+    "created_by_id": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "use_count": {
+      "type": "number",
+      "default": 0
+    },
+    "max_uses": {
+      "type": "number"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "code",
+    "created_by_id"
+  ]
+}

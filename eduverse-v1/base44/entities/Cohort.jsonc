@@ -1,0 +1,92 @@
+{
+  "name": "Cohort",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "career_category_id": {
+      "type": "string",
+      "description": "Reference to CareerCategory"
+    },
+    "community_id": {
+      "type": "string",
+      "description": "Reference to Community/School"
+    },
+    "school_id": {
+      "type": "string",
+      "description": "Reference to School"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "application_deadline": {
+      "type": "string",
+      "format": "date"
+    },
+    "total_hours": {
+      "type": "number"
+    },
+    "num_openings": {
+      "type": "number",
+      "default": 1
+    },
+    "location_type": {
+      "type": "string",
+      "enum": [
+        "on-site",
+        "remote",
+        "hybrid"
+      ],
+      "default": "remote"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "closed"
+      ],
+      "default": "draft"
+    },
+    "responsible_members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "milestone_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "enrolled_count": {
+      "type": "number",
+      "default": 0
+    },
+    "created_by_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "community_id",
+    "title"
+  ]
+}

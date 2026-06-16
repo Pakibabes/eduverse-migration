@@ -1,0 +1,101 @@
+{
+  "name": "StudentMilestoneSubmission",
+  "type": "object",
+  "properties": {
+    "internship_id": {
+      "type": "string",
+      "description": "Reference to Internship"
+    },
+    "student_id": {
+      "type": "string",
+      "description": "Reference to User (student)"
+    },
+    "student_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "description": "Milestone title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Student's description of the milestone work"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "assigned_staff_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Staff members assigned to review"
+    },
+    "student_documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file_url": {
+            "type": "string"
+          },
+          "file_name": {
+            "type": "string"
+          },
+          "uploaded_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "description": "Documents uploaded by the student"
+    },
+    "admin_documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file_url": {
+            "type": "string"
+          },
+          "file_name": {
+            "type": "string"
+          },
+          "uploaded_by_name": {
+            "type": "string"
+          },
+          "uploaded_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "description": "Documents uploaded by admin/staff in response"
+    },
+    "admin_notes": {
+      "type": "string",
+      "description": "Admin/staff notes or feedback"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "submitted",
+        "under_review",
+        "approved",
+        "revision_requested"
+      ],
+      "default": "draft"
+    },
+    "submitted_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "internship_id",
+    "student_id",
+    "title"
+  ]
+}

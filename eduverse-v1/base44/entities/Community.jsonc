@@ -1,0 +1,84 @@
+{
+  "name": "Community",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "cover_url": {
+      "type": "string"
+    },
+    "about_content": {
+      "type": "string",
+      "description": "Rich about page content (supports markdown/plain text)"
+    },
+    "intro_video_url": {
+      "type": "string",
+      "description": "Intro video URL shown on the about page"
+    },
+    "about_tagline": {
+      "type": "string",
+      "description": "Short tagline shown on the about page"
+    },
+    "is_private": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_paid": {
+      "type": "boolean",
+      "default": false
+    },
+    "price": {
+      "type": "number",
+      "default": 0
+    },
+    "billing_type": {
+      "type": "string",
+      "enum": [
+        "one_time",
+        "monthly",
+        "yearly"
+      ],
+      "default": "one_time"
+    },
+    "member_count": {
+      "type": "number",
+      "default": 0
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "archived"
+      ],
+      "default": "active"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Career category this community belongs to"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country this community is restricted to"
+    },
+    "school_id": {
+      "type": "string",
+      "description": "School this community belongs to"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

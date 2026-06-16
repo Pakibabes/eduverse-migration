@@ -1,0 +1,37 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": ["super_admin", "admin", "school_admin", "school_staff", "student", "professional"],
+      "default": "student"
+    },
+    "country": {
+      "type": "string",
+      "description": "User's country (locked if linked to school)"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of CareerCategory IDs user has access to"
+    },
+    "education_status": {
+      "type": "string",
+      "enum": ["graduated", "not_graduated"],
+      "default": "not_graduated"
+    },
+    "school_id": {
+      "type": "string",
+      "description": "Optional link to School for governance and alumni tracking"
+    }
+  }
+}

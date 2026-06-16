@@ -1,0 +1,71 @@
+{
+  "name": "InternshipTemplate",
+  "type": "object",
+  "properties": {
+    "school_id": {
+      "type": "string",
+      "description": "Reference to School"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "template_data": {
+      "type": "object",
+      "properties": {
+        "milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "days_offset": {
+                "type": "number",
+                "description": "Days from internship start date"
+              },
+              "required_signatures": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "role": {
+                      "type": "string",
+                      "enum": [
+                        "intern",
+                        "staff",
+                        "both"
+                      ]
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "pending",
+                        "signed"
+                      ],
+                      "default": "pending"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "description": "Template structure with milestones"
+    },
+    "created_by_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "school_id",
+    "name"
+  ]
+}

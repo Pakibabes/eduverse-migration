@@ -1,0 +1,23 @@
+{
+  "name": "SchoolOnboarding",
+  "type": "object",
+  "properties": {
+    "school_id": {
+      "type": "string",
+      "description": "Reference to School"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Reference to CareerCategory"
+    },
+    "course_id": {
+      "type": "string",
+      "description": "Reference to Course"
+    }
+  },
+  "required": [
+    "school_id",
+    "category_id",
+    "course_id"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "name": "Internship",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string",
+      "description": "Reference to the associated post"
+    },
+    "community_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "position_title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "requirements": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "location_type": {
+      "type": "string",
+      "enum": [
+        "on-site",
+        "remote",
+        "hybrid"
+      ],
+      "default": "remote"
+    },
+    "duration_weeks": {
+      "type": "number"
+    },
+    "total_hours": {
+      "type": "number"
+    },
+    "stipend": {
+      "type": "number"
+    },
+    "schools_selected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of community IDs (schools) this internship is posted to. Empty array = all schools"
+    },
+    "is_posted_to_all_schools": {
+      "type": "boolean",
+      "default": false
+    },
+    "career_category_id": {
+      "type": "string",
+      "description": "Reference to CareerCategory"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "pending_signature",
+        "full",
+        "closed"
+      ],
+      "default": "draft"
+    },
+    "num_openings": {
+      "type": "number",
+      "default": 1
+    },
+    "enrolled_count": {
+      "type": "number",
+      "default": 0
+    },
+    "applicant_count": {
+      "type": "number",
+      "default": 0
+    },
+    "responsible_members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Array of responsible staff members"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "application_deadline": {
+      "type": "string",
+      "format": "date"
+    },
+    "milestone_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of InternshipMilestone IDs"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "created_by_id": {
+      "type": "string"
+    },
+    "cohort_id": {
+      "type": "string",
+      "description": "Reference to InternshipCohort for grouping by season/year"
+    }
+  },
+  "required": [
+    "community_id",
+    "title"
+  ]
+}

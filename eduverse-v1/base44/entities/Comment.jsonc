@@ -1,0 +1,42 @@
+{
+  "name": "Comment",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string"
+    },
+    "parent_comment_id": {
+      "type": "string",
+      "description": "ID of the parent comment if this is a reply"
+    },
+    "author_id": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "like_count": {
+      "type": "number",
+      "default": 0
+    },
+    "upvote_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Upvotes for comments in upvote-style topics"
+    },
+    "upvoted_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User IDs who upvoted this comment"
+    }
+  },
+  "required": [
+    "post_id",
+    "content"
+  ]
+}

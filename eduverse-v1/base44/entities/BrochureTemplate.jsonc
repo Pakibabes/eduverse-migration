@@ -1,0 +1,81 @@
+{
+  "name": "BrochureTemplate",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Template name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Template description"
+    },
+    "thumbnail_url": {
+      "type": "string",
+      "description": "Preview thumbnail image URL"
+    },
+    "category_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "References to CareerCategories - which categories this brochure is for (empty = all categories)"
+    },
+    "template_design": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string",
+          "description": "HTML or text content"
+        },
+        "color_scheme": {
+          "type": "string",
+          "description": "Primary color hex"
+        },
+        "logo_url": {
+          "type": "string",
+          "description": "Logo image URL"
+        },
+        "qr_placeholder_position": {
+          "type": "string",
+          "enum": [
+            "top-right",
+            "bottom-left",
+            "bottom-right",
+            "center"
+          ],
+          "description": "Where QR code should be placed"
+        },
+        "qr_size": {
+          "type": "number",
+          "description": "QR code size in mm"
+        }
+      },
+      "description": "Template design configuration"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "premium",
+        "minimal",
+        "corporate"
+      ],
+      "description": "Template category"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "created_by_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "template_design"
+  ]
+}

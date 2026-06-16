@@ -1,0 +1,33 @@
+{
+  "name": "Reward",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "User who earned the reward"
+    },
+    "internship_id": {
+      "type": "string",
+      "description": "Reference to Internship"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "points": {
+      "type": "number",
+      "default": 0
+    },
+    "earned_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "user_id",
+    "internship_id",
+    "title"
+  ]
+}

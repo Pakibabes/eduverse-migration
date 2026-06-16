@@ -1,0 +1,37 @@
+{
+  "name": "CommunityTopic",
+  "type": "object",
+  "properties": {
+    "community_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "general",
+        "hot_topic"
+      ],
+      "default": "general"
+    },
+    "style": {
+      "type": "string",
+      "enum": [
+        "regular",
+        "upvote"
+      ],
+      "default": "regular",
+      "description": "regular = standard comments feed; upvote = Reddit/PH style with upvoting on posts and comments"
+    },
+    "order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "community_id",
+    "name"
+  ]
+}

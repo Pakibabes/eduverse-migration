@@ -1,0 +1,37 @@
+{
+  "name": "Certificate",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "User who earned the certificate"
+    },
+    "internship_id": {
+      "type": "string",
+      "description": "Reference to Internship"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "issue_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "certificate_url": {
+      "type": "string",
+      "description": "URL to certificate PDF/image"
+    },
+    "credential_id": {
+      "type": "string",
+      "description": "Unique credential identifier"
+    }
+  },
+  "required": [
+    "user_id",
+    "internship_id",
+    "title"
+  ]
+}

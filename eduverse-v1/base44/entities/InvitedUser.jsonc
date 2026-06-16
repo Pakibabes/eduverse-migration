@@ -1,0 +1,35 @@
+{
+  "name": "InvitedUser",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "super_admin",
+        "admin",
+        "school_admin",
+        "school_staff",
+        "student",
+        "professional"
+      ],
+      "default": "student"
+    },
+    "country": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "email"
+  ]
+}

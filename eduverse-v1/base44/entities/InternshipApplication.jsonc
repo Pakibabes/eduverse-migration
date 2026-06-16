@@ -1,0 +1,166 @@
+{
+  "name": "InternshipApplication",
+  "type": "object",
+  "properties": {
+    "internship_id": {
+      "type": "string"
+    },
+    "student_id": {
+      "type": "string"
+    },
+    "student_name": {
+      "type": "string"
+    },
+    "student_email": {
+      "type": "string"
+    },
+    "resume_url": {
+      "type": "string"
+    },
+    "resume_file_name": {
+      "type": "string"
+    },
+    "project_samples_url": {
+      "type": "string"
+    },
+    "project_samples_file_name": {
+      "type": "string"
+    },
+    "cover_note": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "applied",
+        "pending_interview",
+        "interview_completed",
+        "under_review",
+        "accepted",
+        "rejected"
+      ],
+      "default": "applied"
+    },
+    "interview_url": {
+      "type": "string"
+    },
+    "interview_completed_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "applied_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "linkedin_url": {
+      "type": "string"
+    },
+    "telegram_username": {
+      "type": "string"
+    },
+    "applicant_type": {
+      "type": "string",
+      "enum": [
+        "student",
+        "professional"
+      ],
+      "default": "student"
+    },
+    "current_school": {
+      "type": "string"
+    },
+    "years_in_university": {
+      "type": "string"
+    },
+    "graduation_year": {
+      "type": "string"
+    },
+    "major": {
+      "type": "string"
+    },
+    "education_level": {
+      "type": "string"
+    },
+    "current_employer": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "dev_role": {
+      "type": "string"
+    },
+    "ai_familiarity": {
+      "type": "string"
+    },
+    "programming_languages": {
+      "type": "string"
+    },
+    "ai_tools_used": {
+      "type": "string"
+    },
+    "nocode_familiarity": {
+      "type": "string"
+    },
+    "nocode_tools": {
+      "type": "string"
+    },
+    "ai_projects_description": {
+      "type": "string"
+    },
+    "internship_goals": {
+      "type": "string"
+    },
+    "ai_fields_interest": {
+      "type": "string"
+    },
+    "ai_career_plan": {
+      "type": "string"
+    },
+    "weekly_hours_commitment": {
+      "type": "string"
+    },
+    "available_remote": {
+      "type": "string"
+    },
+    "scheduling_limitations": {
+      "type": "string"
+    },
+    "preferred_start_date": {
+      "type": "string"
+    },
+    "anything_else": {
+      "type": "string"
+    },
+    "how_did_you_hear": {
+      "type": "string"
+    },
+    "submission_date": {
+      "type": "string"
+    },
+    "accuracy_confirmed": {
+      "type": "boolean",
+      "default": false
+    },
+    "custom_answers": {
+      "type": "object",
+      "description": "JSON object mapping question IDs to student responses"
+    }
+  },
+  "required": [
+    "internship_id",
+    "student_id"
+  ]
+}

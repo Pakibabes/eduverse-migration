@@ -1,0 +1,66 @@
+{
+  "name": "Quiz",
+  "type": "object",
+  "properties": {
+    "lesson_id": {
+      "type": "string"
+    },
+    "course_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "multiple_choice",
+              "true_false",
+              "short_answer"
+            ]
+          },
+          "question": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "correct_answer": {
+            "type": "string"
+          },
+          "points": {
+            "type": "number",
+            "default": 10
+          }
+        }
+      }
+    },
+    "passing_score": {
+      "type": "number",
+      "default": 70
+    },
+    "points_reward": {
+      "type": "number",
+      "default": 50
+    },
+    "require_pass_to_complete": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "lesson_id",
+    "title"
+  ]
+}

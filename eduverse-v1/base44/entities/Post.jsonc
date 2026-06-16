@@ -1,0 +1,96 @@
+{
+  "name": "Post",
+  "type": "object",
+  "properties": {
+    "community_id": {
+      "type": "string"
+    },
+    "author_id": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "author_avatar": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "image_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "like_count": {
+      "type": "number",
+      "default": 0
+    },
+    "comment_count": {
+      "type": "number",
+      "default": 0
+    },
+    "liked_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "upvote_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Upvotes for upvote-style topics"
+    },
+    "upvoted_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User IDs who upvoted"
+    },
+    "is_pinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_hot_topic": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this post is marked as a Hot Topic discussion"
+    },
+    "hot_topic_name": {
+      "type": "string",
+      "description": "Name of the hot topic this post belongs to"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "post",
+        "announcement"
+      ],
+      "default": "post"
+    },
+    "in_school_feed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this post has been shared to the school feed by an admin"
+    },
+    "topic_id": {
+      "type": "string",
+      "description": "ID of the CommunityTopic category this post belongs to"
+    },
+    "topic_name": {
+      "type": "string",
+      "description": "Denormalized topic name for display"
+    },
+    "allow_sharing": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the post can be shared to social media"
+    }
+  },
+  "required": [
+    "community_id",
+    "content"
+  ]
+}

@@ -1,0 +1,8 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  // Under Prisma 7, your database URLs live strictly in prisma.config.ts!
+}

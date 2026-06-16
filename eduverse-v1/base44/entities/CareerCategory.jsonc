@@ -1,0 +1,32 @@
+{
+  "name": "CareerCategory",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "retired"
+      ],
+      "default": "active"
+    },
+    "display_order": {
+      "type": "number",
+      "default": 0
+    },
+    "parent_category_id": {
+      "type": "string",
+      "description": "Reference to parent category for nesting"
+    },
+    "landing_config": {
+      "type": "object",
+      "description": "JSON object holding landing details and question forms configuration"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

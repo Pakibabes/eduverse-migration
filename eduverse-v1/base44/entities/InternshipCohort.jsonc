@@ -1,0 +1,43 @@
+{
+  "name": "InternshipCohort",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Display name for the cohort"
+    },
+    "season": {
+      "type": "string",
+      "enum": [
+        "Spring",
+        "Summer",
+        "Fall",
+        "Winter"
+      ],
+      "description": "Season when internships in this cohort start"
+    },
+    "year": {
+      "type": "number",
+      "description": "Year of the cohort"
+    },
+    "career_category_id": {
+      "type": "string",
+      "description": "Reference to CareerCategory"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "closed"
+      ],
+      "default": "open",
+      "description": "Cohort lifecycle status"
+    }
+  },
+  "required": [
+    "name",
+    "season",
+    "year",
+    "career_category_id"
+  ]
+}

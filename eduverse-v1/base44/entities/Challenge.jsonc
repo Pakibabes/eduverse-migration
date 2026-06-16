@@ -1,0 +1,83 @@
+{
+  "name": "Challenge",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "reward_type": {
+      "type": "string",
+      "enum": [
+        "donation",
+        "scholarship",
+        "recognition",
+        "grant"
+      ],
+      "default": "recognition"
+    },
+    "reward_value": {
+      "type": "string",
+      "description": "e.g. '$500 donation' or 'Full scholarship'"
+    },
+    "target_metric": {
+      "type": "string",
+      "enum": [
+        "internship_launches",
+        "top_students",
+        "student_participation",
+        "community_engagement",
+        "course_completions"
+      ],
+      "default": "internship_launches"
+    },
+    "target_value": {
+      "type": "number",
+      "description": "Numeric goal to hit"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed",
+        "expired"
+      ],
+      "default": "active"
+    },
+    "winner_school_id": {
+      "type": "string",
+      "description": "School that won this challenge"
+    },
+    "target_dashboard": {
+      "type": "string",
+      "enum": [
+        "school",
+        "education",
+        "all"
+      ],
+      "default": "school",
+      "description": "Which dashboard this challenge is visible on"
+    },
+    "community_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Communities this challenge is posted to. Empty = all communities."
+    },
+    "created_by_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "reward_type",
+    "target_metric"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "InternshipInterviewLink",
+  "type": "object",
+  "properties": {
+    "internship_id": {
+      "type": "string",
+      "description": "Reference to Internship"
+    },
+    "career_category_id": {
+      "type": "string",
+      "description": "Reference to CareerCategory (optional)"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country this link applies to (empty = all countries)"
+    },
+    "wedge_interview_url": {
+      "type": "string",
+      "description": "Wedge interview URL"
+    },
+    "label": {
+      "type": "string",
+      "description": "Optional label for admin reference"
+    }
+  },
+  "required": [
+    "internship_id",
+    "wedge_interview_url"
+  ]
+}
